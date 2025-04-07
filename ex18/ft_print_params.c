@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adores <adores@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 13:08:17 by adores            #+#    #+#             */
-/*   Updated: 2025/04/07 12:26:28 by adores           ###   ########.fr       */
+/*   Created: 2025/04/04 15:46:27 by adores            #+#    #+#             */
+/*   Updated: 2025/04/04 18:42:22 by adores           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,42 +26,19 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
-}
-
 int	main(int argc, char **argv)
 {
-	int		count1;
-	int		count2;
-	char	*tmp;
+	int	i;
 
-	count1 = 1;
-	while (count1 < argc)
+	if (argc > 1)
 	{
-		count2 = count1 + 1;
-		while (count2 < argc)
+		i = 1;
+		while (i < argc)
 		{
-			if (ft_strcmp(argv[count1], argv[count2]) > 0)
-			{
-				tmp = argv[count1];
-				argv[count1] = argv[count2];
-				argv[count2] = tmp;
-			}
-			count2++;
+			ft_putstr(argv[i]);
+			ft_putchar('\n');
+			i++;
 		}
-		ft_putstr(argv[count1]);
-		ft_putchar('\n');
-		count1++;
 	}
+	return (0);
 }

@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-int *ft_range(int min, int max)
+int	*ft_range(int min, int max)
 {
 	int	dif;
 	int	*arr;
@@ -35,7 +35,7 @@ int *ft_range(int min, int max)
 	return (arr);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 int main(void)
 {
@@ -49,4 +49,4 @@ int main(void)
 		printf("%d\n", res[i]);
 		i++;
 	}
-}
+} */
