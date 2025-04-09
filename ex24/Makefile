@@ -6,15 +6,15 @@
 #    By: adores <adores@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/05 17:55:04 by adores            #+#    #+#              #
-#    Updated: 2025/04/09 10:49:49 by adores           ###   ########.fr        #
+#    Updated: 2025/04/09 11:06:06 by adores           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strcmp.c srcs/ft_strlen.c srcs/ft_swap.com
+SRC = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strcmp.c srcs/ft_strlen.c srcs/ft_swap.c
 
-OBJ = $(SRC:.c =.o)
+OBJ = $(SRC:.c=.o)
 
 INC_DIR = ./includes/
 
@@ -43,8 +43,3 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-	
-	
-	
-
-
